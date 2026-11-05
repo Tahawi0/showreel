@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Motion design, video editing and AI production showreel by Mohammed Hassan.">
+<meta property="og:title" content="Mohammed Hassan Showreel">
+<meta property="og:image" content="media/SHOWREEL_2026_16x9.jpg">
+<style>body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Mohammed Hassan Showreel</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=IBM+Plex+Sans+Arabic:wght@400;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: an edit-suite page — one big monitor (showreel), then three project "bins", each a timeline row of 16:9 + 9:16 clips with timecode metadata. Single dark look on purpose. */
+:root{
+  --bg:#0b0b0e; --panel:#141419; --line:#26262e; --fg:#f2f1f5; --mute:#9a98a8; --rec:#ff4d3d;
+  --volterra:#9fe8ff; --sard:#e0a271; --luma:#a98bff;
+  --display:'Bricolage Grotesque',ui-sans-serif,system-ui,sans-serif;
+  --arabic:'IBM Plex Sans Arabic',Tahoma,sans-serif;
+  --mono:'JetBrains Mono',ui-monospace,Menlo,monospace;
+  color-scheme:dark;
+}
+body{background:var(--bg);color:var(--fg);font-family:var(--display);font-size:16px;line-height:1.55;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.wrap{max-width:1240px;margin:0 auto;padding-block:28px 80px;display:flex;flex-direction:column;gap:88px}
+a{color:inherit}
+.ar{font-family:var(--arabic);direction:rtl}
+.mono{font-family:var(--mono);font-size:12px;letter-spacing:.06em;color:var(--mute);font-variant-numeric:tabular-nums}
+header{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;border-bottom:1px solid var(--line);padding-bottom:18px}
+.who{font-weight:800;font-size:18px;letter-spacing:-.01em}
+.rec{display:flex;align-items:center;gap:10px}
+.rec i{width:9px;height:9px;border-radius:50%;background:var(--rec);box-shadow:0 0 12px var(--rec);animation:blink 1.2s steps(2) infinite}
+@keyframes blink{50%{opacity:.25}}
+.hero{display:flex;flex-direction:column;gap:26px}
+.hero h1{font-size:clamp(44px,8.5vw,118px);line-height:.92;letter-spacing:-.045em;font-weight:800;text-wrap:balance;margin:0}
+.hero h1 em{font-style:normal;color:var(--rec)}
+.hero .lead{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:end}
+.hero .lead p{margin:0;max-width:58ch;color:var(--mute);font-size:18px}
+.hero .lead .ar{font-size:19px;color:var(--fg);text-align:right}
+.monitor{position:relative;border-radius:14px;overflow:hidden;background:#000;border:1px solid var(--line);aspect-ratio:16/9;max-width:100%}
+.monitor video{width:100%;height:100%;display:block;object-fit:cover}
+.slate{display:flex;flex-wrap:wrap;gap:8px 22px;padding-top:12px}
+.play{position:absolute;inset:0;display:flex;align-items:flex-end;justify-content:flex-start;padding:clamp(12px,3vw,28px);background:linear-gradient(transparent 55%,rgba(0,0,0,.55));border:0;cursor:pointer;color:var(--fg);font:inherit}
+.play span{display:flex;align-items:center;gap:12px;background:rgba(11,11,14,.72);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.18);padding:14px 24px;border-radius:999px;font-weight:600}
+.play span b{width:0;height:0;border-left:12px solid var(--fg);border-top:8px solid transparent;border-bottom:8px solid transparent}
+.play:focus-visible span{outline:2px solid var(--rec);outline-offset:3px}
+.project{display:flex;flex-direction:column;gap:22px;border-top:1px solid var(--line);padding-top:26px}
+.phead{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:24px;align-items:end}
+.phead h2{margin:0;font-size:clamp(34px,5vw,64px);letter-spacing:-.04em;line-height:1;font-weight:800}
+.phead h2 small{display:block;font-size:13px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;margin-bottom:10px}
+.phead p{margin:0;color:var(--mute);max-width:52ch}
+.phead .ar{color:var(--fg);text-align:right;margin-top:6px}
+.bin{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(0,1fr) minmax(0,.62fr);gap:14px;align-items:start}
+.clip{display:flex;flex-direction:column;gap:8px;min-width:0}
+.clip video{width:100%;display:block;border-radius:10px;background:#000;border:1px solid var(--line)}
+.clip .meta{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.clip .meta b{font-family:var(--display);font-size:14px;color:var(--fg);letter-spacing:0;font-weight:600}
+.r169{aspect-ratio:16/9;object-fit:cover}.r916{aspect-ratio:9/16;object-fit:cover}
+.stack{display:flex;flex-direction:column;gap:14px;min-width:0}
+.v .phead h2 small{color:var(--volterra)}.s .phead h2 small{color:var(--sard)}.l .phead h2 small{color:var(--luma)}
+.how{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.how div{background:var(--panel);padding:22px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.how h3{margin:0;font-size:18px;letter-spacing:-.01em}
+.how p{margin:0;color:var(--mute);font-size:14.5px}
+.sect-t{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap;margin-bottom:16px}
+.sect-t h2{margin:0;font-size:28px;letter-spacing:-.02em}
+footer{display:flex;flex-direction:column;gap:14px;border-top:1px solid var(--line);padding-top:30px}
+footer .big{font-size:clamp(36px,6vw,76px);font-weight:800;letter-spacing:-.045em;line-height:1}
+footer .big span{color:var(--rec)}
+.note{color:var(--mute);font-size:14px;max-width:70ch}
+@media (max-width:860px){
+  .hero .lead,.phead{grid-template-columns:1fr}
+  .hero .lead .ar,.phead .ar{text-align:right}
+  .bin{grid-template-columns:minmax(0,1fr) minmax(0,.62fr)}
+  .bin .clip.ad{grid-column:1/-1;order:-1}
+  .how{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:480px){.how{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){.rec i{animation:none}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+<header>
+  <div class="who">Mohammed Hassan</div>
+  <div class="rec mono"><i></i><span>MOTION · EDIT · AI PRODUCTION</span><span id="tc">00:00:00:00</span></div>
+</header>
+
+<section class="hero">
+  <h1>Showreel <em>2026</em></h1>
+  <div class="lead">
+    <p>Three brand worlds built from zero: identity, logo animation, a broadcast-style spot and social cutdowns for each. Automotive, coffee and fintech, in English and Arabic.</p>
+    <p class="ar">ثلاث هويات لبراندات مبتكرة بالكامل: لوجو متحرك، إعلان سينمائي، وريلز للسوشيال ميديا لكل براند — بالعربي والإنجليزي.</p>
+  </div>
+  <div>
+    <div class="monitor">
+      <video id="reel" src="media/SHOWREEL_2026_16x9.mp4" poster="media/SHOWREEL_2026_16x9.jpg" playsinline muted loop autoplay preload="metadata"></video>
+      <button class="play" id="playbtn" type="button" aria-label="Play showreel with sound"><span><b></b>Play with sound · 00:58</span></button>
+    </div>
+    <div class="slate mono"><span>REEL · 00:00:58:00</span><span>1920×1080 · 16:9</span><span>30 FPS · H.264</span><span>MUSIC · ORIGINAL</span></div>
+  </div>
+</section>
+
+<section class="project v">
+  <div class="phead">
+    <div><h2><small>Automotive · Electric SUV</small>VOLTERRA</h2></div>
+    <div><p>A quiet luxury EV. Cold graphite, a single ice-blue light line, letterboxed 2.39:1 framing and an English cinematic voiceover.</p><p class="ar">عربية كهربائية فاخرة — إضاءة باردة، لقطات ليلية، وتعليق صوتي سينمائي.</p></div>
+  </div>
+  <div class="bin">
+    <div class="clip ad"><video class="r169" src="media/VOLTERRA_Ad_16x9.mp4" poster="media/VOLTERRA_Ad_16x9.jpg" controls playsinline preload="none"></video><div class="meta"><b>TV spot</b><span class="mono">00:24 · 16:9 · VO EN</span></div></div>
+    <div class="clip"><video class="r169" src="media/VOLTERRA_Logo_16x9.mp4" poster="media/VOLTERRA_Logo_16x9.jpg" controls playsinline preload="none"></video><div class="meta"><b>Logo reveal</b><span class="mono">00:08 · 16:9</span></div></div>
+    <div class="clip"><video class="r916" src="media/VOLTERRA_Reel_9x16.mp4" poster="media/VOLTERRA_Reel_9x16.jpg" controls playsinline preload="none"></video><div class="meta"><b>Reel</b><span class="mono">00:13 · 9:16</span></div></div>
+  </div>
+</section>
+
+<section class="project s">
+  <div class="phead">
+    <div><h2><small>Specialty Coffee · F&amp;B</small><span class="ar" style="direction:rtl">سَرْد</span> SARD</h2></div>
+    <div><p>An Arabic-first coffee house. Mashrabiya light, copper and roasted browns, Kufi wordmark and a warm Modern Standard Arabic narration.</p><p class="ar">براند قهوة مختصة — هوية عربية، إضاءة مشربية، وتعليق صوتي بالفصحى.</p></div>
+  </div>
+  <div class="bin">
+    <div class="clip ad"><video class="r169" src="media/SARD_Ad_16x9.mp4" poster="media/SARD_Ad_16x9.jpg" controls playsinline preload="none"></video><div class="meta"><b>TV spot</b><span class="mono">00:24 · 16:9 · VO AR</span></div></div>
+    <div class="clip"><video class="r169" src="media/SARD_Logo_16x9.mp4" poster="media/SARD_Logo_16x9.jpg" controls playsinline preload="none"></video><div class="meta"><b>Logo reveal</b><span class="mono">00:08 · 16:9</span></div></div>
+    <div class="clip"><video class="r916" src="media/SARD_Reel_9x16.mp4" poster="media/SARD_Reel_9x16.jpg" controls playsinline preload="none"></video><div class="meta"><b>Reel</b><span class="mono">00:13 · 9:16</span></div></div>
+  </div>
+</section>
+
+<section class="project l">
+  <div class="phead">
+    <div><h2><small>Fintech · Mobile App</small>LUMA</h2></div>
+    <div><p>A bright money app. Animated UI built in motion, live counters and charts on a real phone shot, and bilingual kinetic type.</p><p class="ar">تطبيق مالي — واجهة متحركة، أرقام ورسوم بيانية حيّة، وتايبوجرافي عربي وإنجليزي.</p></div>
+  </div>
+  <div class="bin">
+    <div class="clip ad"><video class="r169" src="media/LUMA_Ad_16x9.mp4" poster="media/LUMA_Ad_16x9.jpg" controls playsinline preload="none"></video><div class="meta"><b>App spot</b><span class="mono">00:22 · 16:9 · VO AR</span></div></div>
+    <div class="clip"><video class="r169" src="media/LUMA_Logo_16x9.mp4" poster="media/LUMA_Logo_16x9.jpg" controls playsinline preload="none"></video><div class="meta"><b>Logo reveal</b><span class="mono">00:08 · 16:9</span></div></div>
+    <div class="clip"><video class="r916" src="media/LUMA_Reel_9x16.mp4" poster="media/LUMA_Reel_9x16.jpg" controls playsinline preload="none"></video><div class="meta"><b>Reel</b><span class="mono">00:13 · 9:16</span></div></div>
+  </div>
+</section>
+
+<section>
+  <div class="sect-t"><h2>How it's made</h2><span class="mono">PIPELINE · AI + CODE + EDIT</span></div>
+  <div class="how">
+    <div><span class="mono">STILLS</span><h3>AI art direction</h3><p>Cinematic plates generated with Google Flow (Nano Banana), then upscaled and graded.</p></div>
+    <div><span class="mono">MOTION</span><h3>Code-driven animation</h3><p>Logos, typography, UI and camera moves animated frame by frame for exact timing.</p></div>
+    <div><span class="mono">SOUND</span><h3>Voice &amp; score</h3><p>Arabic and English voiceovers, original music and SFX from ElevenLabs, ducked and mixed.</p></div>
+    <div><span class="mono">EDIT</span><h3>Cut to the beat</h3><p>Every showreel cut lands on the 120 BPM grid; masters delivered in 16:9 and 9:16.</p></div>
+  </div>
+</section>
+
+<footer>
+  <div class="big">Let's make <span>yours.</span></div>
+  <p class="ar" style="text-align:right;font-size:20px;margin:0">موشن جرافيك · مونتاج · إنتاج بالذكاء الاصطناعي</p>
+  <p class="note">VOLTERRA, SARD and LUMA are original concept brands created for this portfolio. Produced with Claude, Google Flow and ElevenLabs.</p>
+</footer>
+</div>
+
+<script>
+(function(){
+  const v=document.getElementById('reel'),b=document.getElementById('playbtn'),tc=document.getElementById('tc');
+  b.addEventListener('click',()=>{v.muted=false;v.loop=false;v.currentTime=0;v.controls=true;v.play().catch(()=>{});b.hidden=true;});
+  v.addEventListener('ended',()=>{v.muted=true;v.loop=true;v.controls=false;b.hidden=false;v.play().catch(()=>{});});
+  const pad=n=>String(n).padStart(2,'0');
+  function tick(){const t=v.currentTime||0;tc.textContent=`00:${pad(Math.floor(t/60))}:${pad(Math.floor(t%60))}:${pad(Math.floor((t%1)*30))}`;requestAnimationFrame(tick);}
+  tick();
+  // only one clip plays at a time
+  document.querySelectorAll('.clip video').forEach(el=>el.addEventListener('play',()=>{document.querySelectorAll('video').forEach(o=>{if(o!==el&&!o.paused&&o!==v)o.pause();});if(!v.muted){v.pause();}}));
+})();
+</script>
+</body>
+</html>
